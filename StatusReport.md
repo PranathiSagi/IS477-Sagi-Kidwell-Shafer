@@ -33,4 +33,6 @@ Each team member has to write a short summary of their contributions to the curr
 
 **Charlotte** cleaned the Media, Media_Relationships, and Text_Entries datasets. She standardized the datatypes and converted all dates to datetime types. She did not drop missing values because these three datasets did not have a significant amount of missing data.Charlotte also helped the group resolve technical issues by taking code from other commits and sending it to the repository all at once, so that all of our contributions would be saved on the python notebook we cleaned our data in. In the end, she had to resolve the merge conflict by rolling back the changes and re-entering some of our data cleaning work. After this, we faced no further merge conflicts.
 
+**Thea** cleared the constituents dataset and the constituents-objects dataset. One of the datasets had 0 values instead of NaN, so Thea ran code to replace them and make all of the values uniform. For constituents-df, Thea also standardized all the variations of ‘anonymous’ in the artist name columns, making sure they were all represented under one term, so it would be easier for dataset analysis. No missing values were dropped from either dataset; instead, the priority was to make sure all the missing values were represented the same for analysis. 
+
 

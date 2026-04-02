@@ -1,7 +1,5 @@
 
-    
      CREATE OR REPLACE TABLE objects (
-        PRIMARY KEY (objectid),
         objectid INTEGER,
         uuid TEXT,
         accessioned INTEGER,
@@ -16,16 +14,18 @@
         attributioninverted TEXT,
         attribution TEXT,
         creditline TEXT,
+        classification TEXT,
         isvirtual INTEGER,
         departmntabbr TEXT,
         lastdetectmodification TEXT,
         wikidataid TEXT,
         merged_classification TEXT,
+        PRIMARY KEY (objectid)
         );
                
     CREATE OR REPLACE TABLE cons (
         constituentid INTEGER,
-        uuid object,
+        uuid INTEGER,
         ulanid FLOAT,
         preferreddisplayname TEXT,
         forwarddisplayname TEXT,
@@ -39,7 +39,7 @@
         visualbrowsernationality TEXT,
         constituenttype TEXT,
         wikidataid TEXT,
-        PRIMARY KEY (constituentid INT),
+        PRIMARY KEY (constituentid),
     );
     
     CREATE OR REPLACE TABLE media (

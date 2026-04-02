@@ -1,11 +1,12 @@
 # Status Report
-An update on each of the tasks described on your project plan, including references and links to specific artifacts in your repository (such as datasets, scripts, workflows, workflow diagrams, etc). #
+**a) An update on each of the tasks described on your project plan, including references and links to specific artifacts in your repository (such as datasets, scripts, workflows, workflow diagrams, etc).**
 
-The first thing we did was clean the datasets we had selected. We divided the six of them among the three of us and independently went through the df files to find parts of the dataframes that needed to be updated or dropped. One of the most common edits we did was dropping columns and standardizing them for analysis. 
+The first thing we did was clean the datasets we had selected. We divided the six of them among the three of us and independently went through the df files to find parts of the dataframes that needed to be updated or dropped. One of the most common edits we did was   dropping columns and standardizing them for analysis. 
+
 Our second task was to create a database and create database tables that stored the data from our cleaned dataframes. We successfully did this through creating the table objects, constituents, media, media relationships, text entries, and object constituents through the connected museum database. We initially created a sql file for our table creation process, but decided to just use the connected database as this took less time. The initial SQL file, which shows the structure of our database, can be seen here: https://github.com/PranathiSagi/IS477-Sagi-Kidwell-Shafer/blob/main/museum.sql
 Finally, we started on our analysis by answering our first research question: Does the National Art Museum use data management and storage techniques that allow for the preservation and accessibility of digital objects? Our initial analysis can be found here: https://github.com/PranathiSagi/IS477-Sagi-Kidwell-Shafer/blob/main/research-question-1
 
-An updated timeline indicating the status of each task and when they will be completed.
+**b) An updated timeline indicating the status of each task and when they will be completed.**
 
 March 29th: We will be working on integrating all the datasets together with DuckDB and planning how we will analyze the data once it is all integrated together. Before we meet on April 1st, we will make sure that all the datasets that we worked on are clean or filled with the appropriate values to replace missing or NA values. 
 April 1st: During this time, we worked on integrating all the datasets together by creating a database called Museum.db. We then created the tables for this by naming this file Museum.db.wal. We also finalized our timeline for how we want to work on the project over the course of the semester. We finally wrapped everything up by concluding how we will use all the datasets together to answer our research questions. We also created an SQL file for all our tables, where we defined what the primary and foreign keys would be so that we could connect all of the tables together. This will help us answer the research questions
@@ -15,11 +16,11 @@ April 15th: We will work on the first part of our Final Project by deciding the 
 May 1st: We will finalize our project by finishing the last couple of parts, like the findings, future work, challenges, reproducing, and references. 
 May 4th: We will finalize all our work to make sure they make sense conceptually, meet the project requirements, and that our produced work answers all the research questions. 
 
-A description of any changes to your project plan itself, in particular about your progress so far. Also include changes you made to your plan based on feedback you may have received for Milestone 2.
+**c) A description of any changes to your project plan itself, in particular about your progress so far. Also include changes you made to your plan based on feedback you may have received for Milestone 2.**
 
 Changes were made to the timeline in response to feedback on Milestone 2. We changed the timeline to include step-by-step descriptions of how we would work together for each specific date until the status report was due. Another change that we made to our initial plan for the project was deciding to use DuckDB rather than doing our analysis primarily through Python scripts. We felt that creating a database through Duck DB would be better for allowing us to query each of the integrated datasets with the museum sql file. 
 
-c. Summarize any challenges or problems you have encountered so far. For each issue, explain how you resolved it or describe your plan to address it in the near future.
+**d) Summarize any challenges or problems you have encountered so far. For each issue, explain how you resolved it or describe your plan to address it in the near future.**
 
 At first, we had trouble importing the objects and object text entries CSV files due to these files being too big. There was also an issue with the file formats because these files could only be downloaded as HTML files instead of CSV files. However, since we dealt with several issues with downloading these CSV files into our local datasets folder within GitHub, we decided to download the URLs directly from the National Gallery of Art Git Hubs because when downloading them ourselves, we got an error message that said: “We can’t show files because of how big they are.” Another error message we got from attempting to download these datasets was that we “exceeded a secondary rate limit.” There wasn’t anything we could do about this because of issues with the datasets themselves. To solve this, Thea added the CSV file to the GitHub repository via the terminal since it was too big to manually add to the repository.
 One way we decided to solve this issue was by dividing up the work, where we would focus on who would clean up each of the datasets. 
@@ -28,7 +29,7 @@ One challenge we faced was standardizing different terms in columns for our data
 Another challenge we had while cleaning our datasets was making sure we were keeping track of the difference between unknown and purposeful null values, as those represent different things in the dataset. We were also conflicted on whether we should create new versions of the datasets or just save changes to them. 
 Another challenge we ran into was installing DuckDB and using it to create a database for our project. We first tried to install DuckDB with import statements but later realized we needed to install it on our computers using pip commands. We used various version of pip to get the program downloaded on all of our computers. 
 
-Each team member has to write a short summary of their contributions to the current milestone. Each team member should add and commit their contribution summary themselves to the shared github repo.
+**e)Each team member has to write a short summary of their contributions to the current milestone. Each team member should add and commit their contribution summary themselves to the shared github repo.**
 
 
 **Pranathi** cleaned the objects dataset by first identifying the object types and then getting rid of the missing values. She also identified some of the columns that had duplicate values, so she merged two of the classification fields to get rid of the redundancy. She did this by merging classification to group two of the classification fields together and dropping the classification and visual browser classification fields altogether to make the data cleaner. Pranathi also helped us resolve the merge conflict we were experiencing with our Visual Studio Code file. 

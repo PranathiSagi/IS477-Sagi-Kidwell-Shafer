@@ -15,3 +15,6 @@ April 15th: We will work on the first part of our Final Project by deciding the 
 May 1st: We will finalize our project by finishing the last couple of parts, like the findings, future work, challenges, reproducing, and references. 
 May 4th: We will finalize all our work to make sure they make sense conceptually, meet the project requirements, and that our produced work answers all the research questions. 
 
+A description of any changes to your project plan itself, in particular about your progress so far. Also include changes you made to your plan based on feedback you may have received for Milestone 2.
+
+Changes were made to the timeline in response to feedback on Milestone 2. We changed the timeline to include step-by-step descriptions of how we would work together for each specific date until the status report was due. Another change that we made to our initial plan for the project was deciding to use DuckDB rather than doing our analysis primarily through Python scripts. We felt that creating a database through Duck DB would be better for allowing us to query each of the integrated datasets with the museum sql file. 

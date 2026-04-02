@@ -1,4 +1,4 @@
-# In your project repository, create a new file named StatusReport.md that contains: 
+# Status Report
 An update on each of the tasks described on your project plan, including references and links to specific artifacts in your repository (such as datasets, scripts, workflows, workflow diagrams, etc). #
 
 The first thing we did was clean the datasets we had selected. We divided the six of them among the three of us and independently went through the df files to find parts of the dataframes that needed to be updated or dropped. One of the most common edits we did was dropping columns and standardizing them for analysis. 

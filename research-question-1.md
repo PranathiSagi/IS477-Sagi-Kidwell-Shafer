@@ -1,1 +1,3 @@
 Does the National Art Museum use data management and storage techniques that allow for the preservation and accessibility of digital objects?
+
+Based on our data analysis from creating the SQL file and cleaning our dataset, we would say that the National Art Museum's data curation methods are not ideal because we noticed there is very little documentation about the meanings of the problems. We specifically noticed that there were a significant amount of missing values and a lot of the values in the columns were duplicated, so we had to do additional data cleaning methods to merge categories that were mispelled or capitalized incorrectly. 

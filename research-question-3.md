@@ -1,1 +1,1 @@
-We want to know what the relationship is between older, traditional works of art and modern works at the National Art Museum in terms of what region they come from and the artist who made them.
+We want to know the relationship between older, traditional works of art and modern works at the National Art Museum, in terms of their regional origins and the artists who made them.

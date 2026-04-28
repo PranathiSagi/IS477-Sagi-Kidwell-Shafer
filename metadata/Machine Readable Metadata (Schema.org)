@@ -29,7 +29,7 @@
 "distribution": [
   {
     "@type": "DataDownload",
-    "contentUrl": "https://github.com/.../museum_db_export/data.csv",
+    "contentUrl": "https://github.com/PranathiSagi/IS477-Sagi-Kidwell-Shafer/tree/main/data",
     "encodingFormat": "text/csv"
   },
   {

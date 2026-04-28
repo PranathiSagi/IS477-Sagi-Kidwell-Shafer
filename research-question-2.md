@@ -1,1 +1,3 @@
-What is the difference between how digital and traditional media in the National Art Museum are treated? Are there more digital or traditional items?
+What is the difference between how digital and traditional media are treated in the National Gallery of Art Museum? Are there more digital items or traditional items? 
+
+Since there are clearly more traditional pieces being represented, as seen with these data visualization charts, the difference between how digital and traditional media artworks are being represented in the Museum is that it heavily favors and prioritizes traditional media more than digital media pieces. This makes sense since the Museum has many more older works from ancient European paintings, so it makes sense for there to be more traditional than digital artworks.

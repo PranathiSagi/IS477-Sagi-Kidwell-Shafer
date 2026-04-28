@@ -17,6 +17,11 @@
       "@type": "DataDownload",
       "contentUrl": "https://github.com/PranathiSagi/IS477-Sagi-Kidwell-Shafer/blob/main/museum_db_export/data.csv",
       "encodingFormat": "text/csv"
+    },
+    {
+    "@type": "DataDownload",
+    "contentUrl": "https://github.com/.../museum_db_export/schema.sql",
+    "encodingFormat": "application/sql"
     }
   ],
   "publisher": {
@@ -25,16 +30,4 @@
   }
 }
 </script>
-
-"distribution": [
-  {
-    "@type": "DataDownload",
-    "contentUrl": "https://github.com/PranathiSagi/IS477-Sagi-Kidwell-Shafer/tree/main/data",
-    "encodingFormat": "text/csv"
-  },
-  {
-    "@type": "DataDownload",
-    "contentUrl": "https://github.com/.../museum_db_export/schema.sql",
-    "encodingFormat": "application/sql"
-  }
 ]

@@ -20,4 +20,4 @@
 
 **How to Install Dependencies:**
 
-**References:** Formatted citations for any papers, datasets, or software used in your project.
+**References:** [Formatted citations for any papers, datasets, or software used in your project.]The National Gallery of Art Open Data File on GitHub: (https://github.com/NationalGalleryOfArt/opendata/tree/main/data)

@@ -3,9 +3,8 @@ import pandas as pd
 import requests
 from concurrent.futures import ThreadPoolExecutor
 import matplotlib.pyplot as plt
-import snakemake
 
-db_path = snakemake.input.db
+db_path = snakemake.input[0]
 con = duckdb.connect(db_path)
 
 digital_objects = con.sql("SELECT * FROM media").df()

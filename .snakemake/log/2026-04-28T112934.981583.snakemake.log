@@ -1,0 +1,42 @@
+Assuming unrestricted shared filesystem usage.
+host: illinoisnet-guest-10-203-236-201.near.illinois.edu
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job           count
+----------  -------
+researchQ2        1
+run_all           1
+total             2
+
+Select jobs to execute...
+Execute 1 jobs...
+[Tue Apr 28 11:29:35 2026]
+localrule researchQ2:
+    input: Museum.db
+    output: results/Traditional_vs_Digital_Object_Distribution.png
+    jobid: 2
+    reason: Missing output files: results/Traditional_vs_Digital_Object_Distribution.png
+    resources: tmpdir=/var/folders/w7/23_x_krd56dgz3l_g0tp_m0w0000gn/T
+RuleException:
+CalledProcessError in file "/Users/charlotteshafer/Documents/GitHub/IS477-Sagi-Kidwell-Shafer/Snakefile", line 20:
+Command 'set -euo pipefail;  /Users/charlotteshafer/miniconda3/bin/python /Users/charlotteshafer/Documents/GitHub/IS477-Sagi-Kidwell-Shafer/.snakemake/scripts/tmp1ntl5270.researchQ2.py' returned non-zero exit status 1.
+[Tue Apr 28 11:29:37 2026]
+Error in rule researchQ2:
+    message: None
+    jobid: 2
+    input: Museum.db
+    output: results/Traditional_vs_Digital_Object_Distribution.png
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look below for error messages
+[Tue Apr 28 11:29:37 2026]
+Error in rule researchQ2:
+    message: None
+    jobid: 2
+    input: Museum.db
+    output: results/Traditional_vs_Digital_Object_Distribution.png
+Complete log(s): /Users/charlotteshafer/Documents/GitHub/IS477-Sagi-Kidwell-Shafer/.snakemake/log/2026-04-28T112934.981583.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

@@ -1,0 +1,57 @@
+Assuming unrestricted shared filesystem usage.
+host: illinoisnet-guest-10-203-236-201.near.illinois.edu
+Building DAG of jobs...
+Traceback (most recent call last):
+
+  File "/Users/charlotteshafer/miniconda3/lib/python3.11/site-packages/snakemake/cli.py", line 2308, in args_to_api
+    dag_api.execute_workflow(
+
+  File "/Users/charlotteshafer/miniconda3/lib/python3.11/site-packages/snakemake/api.py", line 646, in execute_workflow
+    workflow.execute(
+
+  File "/Users/charlotteshafer/miniconda3/lib/python3.11/site-packages/snakemake/workflow.py", line 1299, in execute
+    self.async_run(
+
+  File "/Users/charlotteshafer/miniconda3/lib/python3.11/site-packages/snakemake/workflow.py", line 268, in async_run
+    return runner.run(coro)
+           ^^^^^^^^^^^^^^^^
+
+  File "/Users/charlotteshafer/miniconda3/lib/python3.11/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/Users/charlotteshafer/miniconda3/lib/python3.11/asyncio/base_events.py", line 653, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+
+  File "/Users/charlotteshafer/miniconda3/lib/python3.11/site-packages/snakemake/dag.py", line 1978, in postprocess
+    processor.process()
+
+  File "/Users/charlotteshafer/miniconda3/lib/python3.11/site-packages/snakemake/dag.py", line 3443, in process
+    self.process_job(job)
+
+  File "/Users/charlotteshafer/miniconda3/lib/python3.11/site-packages/snakemake/dag.py", line 3486, in process_job
+    script_sourcefile, _, _, _, _ = script.get_source(
+                                    ^^^^^^^^^^^^^^^^^^
+
+  File "/Users/charlotteshafer/miniconda3/lib/python3.11/site-packages/snakemake/script/__init__.py", line 1376, in get_source
+    with sourcecache.open(source_file) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/Users/charlotteshafer/miniconda3/lib/python3.11/site-packages/snakemake/sourcecache.py", line 726, in open
+    cache_entry = self._cache(source_file)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/Users/charlotteshafer/miniconda3/lib/python3.11/site-packages/snakemake/sourcecache.py", line 763, in _cache
+    self._do_cache(source_file, cache_entry)
+
+  File "/Users/charlotteshafer/miniconda3/lib/python3.11/site-packages/snakemake/sourcecache.py", line 767, in _do_cache
+    mtime = source_file.mtime()
+            ^^^^^^^^^^^^^^^^^^^
+
+  File "/Users/charlotteshafer/miniconda3/lib/python3.11/site-packages/snakemake/sourcecache.py", line 203, in mtime
+    return os.stat(self.path).st_mtime
+           ^^^^^^^^^^^^^^^^^^
+
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/charlotteshafer/Documents/GitHub/IS477-Sagi-Kidwell-Shafer/python scripts/researchQ1.py'
+

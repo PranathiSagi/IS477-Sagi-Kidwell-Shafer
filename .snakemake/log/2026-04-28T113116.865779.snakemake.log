@@ -1,0 +1,37 @@
+Assuming unrestricted shared filesystem usage.
+host: illinoisnet-guest-10-203-236-201.near.illinois.edu
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job           count
+----------  -------
+researchQ2        1
+run_all           1
+total             2
+
+Select jobs to execute...
+Execute 1 jobs...
+[Tue Apr 28 11:31:17 2026]
+localrule researchQ2:
+    input: Museum.db
+    output: results/Traditional_vs_Digital_Object_Distribution.png
+    jobid: 2
+    reason: Missing output files: results/Traditional_vs_Digital_Object_Distribution.png
+    resources: tmpdir=/var/folders/w7/23_x_krd56dgz3l_g0tp_m0w0000gn/T
+[Tue Apr 28 11:31:19 2026]
+Finished jobid: 2 (Rule: researchQ2)
+1 of 2 steps (50%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Tue Apr 28 11:31:19 2026]
+localrule run_all:
+    input: Museum.db, museum_database_export.sql, results/Traditional_vs_Digital_Object_Distribution.png
+    jobid: 0
+    reason: Input files updated by another job: results/Traditional_vs_Digital_Object_Distribution.png
+    resources: tmpdir=/var/folders/w7/23_x_krd56dgz3l_g0tp_m0w0000gn/T
+[Tue Apr 28 11:31:19 2026]
+Finished jobid: 0 (Rule: run_all)
+2 of 2 steps (100%) done
+Complete log(s): /Users/charlotteshafer/Documents/GitHub/IS477-Sagi-Kidwell-Shafer/.snakemake/log/2026-04-28T113116.865779.snakemake.log

@@ -2,9 +2,8 @@ import duckdb
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-import snakemake
 
-db_path = snakemake.input.db
+db_path = snakemake.input[0]
 con = duckdb.connect(db_path)
 
 result_df = con.sql("""
@@ -13,10 +12,10 @@ result_df = con.sql("""
         mr.relatedid, 
         mr.relatedentity,
         o.*
-    FROM media_df AS m
-    FULL OUTER JOIN media_relationships_df AS mr 
+    FROM media AS m
+    FULL OUTER JOIN media_relationships AS mr 
     ON m.mediaid = mr.mediaid FULL OUTER JOIN 
-    objects_df AS o ON mr.relatedid = o.objectid
+    objects AS o ON mr.relatedid = o.objectid
 """).df()
 
 traditional_counts = result_df["mediaid"].isna().sum()

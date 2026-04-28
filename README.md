@@ -18,4 +18,6 @@
 
 **Reproducing:** Sequence of steps required for someone else to reproduce your results.
 
+**How to Install Dependencies**
+
 **References:** Formatted citations for any papers, datasets, or software used in your project.

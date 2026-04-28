@@ -1,6 +1,7 @@
 **Title:** Title of your project
 
 **Contributors:** Bulleted list of contributors (with optional ORCIDs).
+-Pranathi:  I worked on the Summary and the Data profile sections. I also worked on answering the second research question by creating the SQL table to connect the media, media relations, and objects datasets together. Once I did this, I made a data visualization bar chart to compare the amount of traditional versus digital objects that were represented in the National Gallery of Art dataset. Once I did this, I was able to answer my research questions. This helped me add more to the Summary and Data profile sections. I also did the Metadata documentation section by importing the Data Dictionary information from the original National Gallery  of Art. I finished this part off by including the machine-readable descriptive metadata that described my project in conformance with the Schema.org standard. 
 
 **Summary:** [500-600 words] Description of your project, motivation, research question(s), and any findings.
 

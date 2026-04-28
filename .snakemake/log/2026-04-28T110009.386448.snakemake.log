@@ -1,0 +1,49 @@
+Assuming unrestricted shared filesystem usage.
+host: illinoisnet-guest-10-203-236-201.near.illinois.edu
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job           count
+----------  -------
+researchQ1        1
+researchQ2        1
+run_all           1
+total             3
+
+Select jobs to execute...
+Execute 1 jobs...
+[Tue Apr 28 11:00:09 2026]
+localrule researchQ1:
+    input: Museum.db
+    output: results/Play_URL_Status_Codes.png, results/Thumbnail_URL_Status_Codes.png, results/Download_URL_Status_Codes.png, results/Image_URL_Status_Codes.png
+    jobid: 2
+    reason: Missing output files: results/Thumbnail_URL_Status_Codes.png, results/Download_URL_Status_Codes.png, results/Image_URL_Status_Codes.png, results/Play_URL_Status_Codes.png
+    resources: tmpdir=/var/folders/w7/23_x_krd56dgz3l_g0tp_m0w0000gn/T
+RuleException:
+CalledProcessError in file "/Users/charlotteshafer/Documents/GitHub/IS477-Sagi-Kidwell-Shafer/Snakefile", line 27:
+Command 'set -euo pipefail;  python scripts/researchQ1.py' returned non-zero exit status 1.
+[Tue Apr 28 11:00:10 2026]
+Error in rule researchQ1:
+    message: None
+    jobid: 2
+    input: Museum.db
+    output: results/Play_URL_Status_Codes.png, results/Thumbnail_URL_Status_Codes.png, results/Download_URL_Status_Codes.png, results/Image_URL_Status_Codes.png
+    shell:
+        python scripts/researchQ1.py
+        (command exited with non-zero exit code)
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look below for error messages
+[Tue Apr 28 11:00:10 2026]
+Error in rule researchQ1:
+    message: None
+    jobid: 2
+    input: Museum.db
+    output: results/Play_URL_Status_Codes.png, results/Thumbnail_URL_Status_Codes.png, results/Download_URL_Status_Codes.png, results/Image_URL_Status_Codes.png
+    shell:
+        python scripts/researchQ1.py
+        (command exited with non-zero exit code)
+Complete log(s): /Users/charlotteshafer/Documents/GitHub/IS477-Sagi-Kidwell-Shafer/.snakemake/log/2026-04-28T110009.386448.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

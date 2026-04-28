@@ -1,0 +1,7 @@
+Assuming unrestricted shared filesystem usage.
+host: illinoisnet-guest-10-203-236-201.near.illinois.edu
+Building DAG of jobs...
+MissingInputException in rule run_all in file "/Users/charlotteshafer/Documents/GitHub/IS477-Sagi-Kidwell-Shafer/Snakefile", line 1:
+Missing input files for rule run_all:
+    affected files:
+        Museum.dbmuseum_database_export.sqlresults/Play_URL_Status_Codes.png

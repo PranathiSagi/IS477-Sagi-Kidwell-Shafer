@@ -21,3 +21,5 @@
 **How to Install Dependencies:**
 
 **References:** [Formatted citations for any papers, datasets, or software used in your project.]The National Gallery of Art Open Data File on GitHub: (https://github.com/NationalGalleryOfArt/opendata/tree/main/data)
+
+Project Metadata: This repository contains machine-readable metadata. You can access the Schema.org JSON-LD file at: metadata/metadata.jsonld

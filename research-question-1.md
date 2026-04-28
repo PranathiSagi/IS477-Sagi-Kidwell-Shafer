@@ -1,4 +1,4 @@
-Does the National Art Museum use data management and storage techniques that allow for the preservation and accessibility of digital objects?
+Does the National Gallery of Art Museum use data management and storage techniques that allow for the preservation and accessibility of digital objects?
 
 Based on our data analysis and cleaning several datasets included in the National Art Museum's ‘opendata’ repository, we would say that the National Art Museum's data curation methods meet general data management standards that allow for the preservation and accessibility of digital objects. The National Art Museum provided a data dictionary in their repository as well as a relational model and extensive SQL code. All of these features made analysis easier. Additionally, the datasets are updated regularly, usually every day, which means that the timeliness of this data is strong.
 

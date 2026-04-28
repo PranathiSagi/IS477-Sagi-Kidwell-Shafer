@@ -1,3 +1,5 @@
+Data Dictionary from the National Gallery of Art Open Data GitHub File: https://github.com/NationalGalleryOfArt/opendata/tree/main/data
+
 National Gallery of Art Open Data Program: Collection Data in CSV Format
 
 Introduction

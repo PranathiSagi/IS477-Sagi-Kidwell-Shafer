@@ -1,0 +1,32 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "Dataset",
+  "name": "Museum Database Export - IS477 Project",
+  "description": "A database export containing records from the museum project, documenting object metadata and collection information.",
+  "url": "https://github.com/PranathiSagi/IS477-Sagi-Kidwell-Shafer/tree/main/museum_db_export",
+  "keywords": ["museum", "database", "IS477", "open data"],
+  "creator": {
+    "@type": "Person",
+    "name": "Pranathi Sagi" 
+  },
+  "datePublished": "2025-04-28",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "contentUrl": "https://raw.githubusercontent.com/PranathiSagi/IS477-Sagi-Kidwell-Shafer/main/museum_db_export/data.csv",
+      "encodingFormat": "text/csv"
+    },
+    {
+      "@type": "DataDownload",
+      "contentUrl": "https://raw.githubusercontent.com/PranathiSagi/IS477-Sagi-Kidwell-Shafer/main/museum.sql",
+      "encodingFormat": "application/sql"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "University Course Project - IS477"
+  }
+}
+</script>

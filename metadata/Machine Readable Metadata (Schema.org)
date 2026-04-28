@@ -20,7 +20,7 @@
     },
     {
     "@type": "DataDownload",
-    "contentUrl": "https://github.com/.../museum_db_export/schema.sql",
+    "contentUrl": "https://github.com/PranathiSagi/IS477-Sagi-Kidwell-Shafer/blob/main/museum.sql",
     "encodingFormat": "application/sql"
     }
   ],
@@ -30,4 +30,3 @@
   }
 }
 </script>
-]

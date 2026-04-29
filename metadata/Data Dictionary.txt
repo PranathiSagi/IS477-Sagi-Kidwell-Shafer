@@ -92,8 +92,30 @@ This data dictionary contains the SQL required to define your own working databa
 
 Table, Column, and Type	Description
 
-DATA CSV FILE
-CREATE TABLE data.csv	
+DATA CSV FILE (object.csv)
+CREATE TABLE objects 
+(
+        objectid 						INTEGER NOT NULL PRIMARY KEY, the primary identifier for an art object - identifier is created by the NGA's collection management system (tms); primary key for the table
+        uuid 							TEXT, universally unique identifier for this art object
+        accessioned 					INTEGER NOT NULL, 0 | 1 flag indicating whether this object is an NGA accessioned work - for the public collection extract, this should always be 1
+        accessionnum 					TEXT, accession number assigned to an art object - art objects that are not accessioned works do not begin with a year - otherwise, the vast majority of NGA art object accession numbers are formatted with a numbering system starting with the year, then followed by an accession lot, and finally ordering within that lot, e.g. 1942.2.1 - depending on the complexity of an art object these can be more complicated
+        title 							TEXT, title of the art object
+        displaydate 					DATE, human readable date corresponding to the creation timeframe of the object
+        beginyear 						FLOAT, computer readable year corresponding to the creation start year of the object
+        endyear 						FLOAT, computer readable year corresponding to the creation finish year of the object
+        visualbrowsertimespan 			TEXT, a computer-generated timeframe slot assigned based on the begin and end year
+        medium 							TEXT, materials comprising the art object
+        dimensions 						TEXT, human readable dimensions of the art object
+        attributioninverted 			TEXT, text describing the artist(s) primarily attributed with creating the work, inverted
+        attribution 					TEXT, text describing the artist(s) primarily attributed with creating the work
+        creditline						TEXT, acknowledgement of credit to constituents who provided or funded the acquisition of the art object 
+        classification 					TEXT, type of art object
+        isvirtual 						INTEGER NOT NULL, 0 | 1 flag indicating whether this art object is a "virtual" object or not - see accompanying documentation for a description of what constituents a "virtual" object
+        departmntabbr 					TEXT, abbreviation for the NGA department with curatorial responsibility for this art object; for a list of NGA curatorial departments, please contact the NGA
+        lastdetectmodification 			TEXT, datetime stamp of the last detected modification of this object in the source system
+        wikidataid 						TEXT, Wikidata ID for NGA object. Not all objects are represented in Wikidata. 
+        merg
+);
 
 Museum.SQL File
 CREATE TABLE objects 

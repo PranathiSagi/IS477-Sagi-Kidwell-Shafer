@@ -3,44 +3,84 @@
   "@context": "https://schema.org/",
   "@type": "Dataset",
   "name": "Museum Database Export - IS477 Project",
-  "description": "A comprehensive database export compiled for the IS477 project. This dataset integrates object metadata and collection information, combining records from [the Objects Dataset: https://media.githubusercontent.com/media/PranathiSagi/IS477-Sagi-Kidwell-Shafer/refs/heads/main/museum_db_export/objects.csv], [the Media Dataset: https://media.githubusercontent.com/media/PranathiSagi/IS477-Sagi-Kidwell-Shafer/refs/heads/main/museum_db_export/media.csv], [the Media Relationships Dataset: https://media.githubusercontent.com/media/PranathiSagi/IS477-Sagi-Kidwell-Shafer/refs/heads/main/museum_db_export/media_relationships.csv], [the Constituents Dataset: https://media.githubusercontent.com/media/PranathiSagi/IS477-Sagi-Kidwell-Shafer/refs/heads/main/museum_db_export/cons.csv], [the Objects Constituents Dataset: https://media.githubusercontent.com/media/PranathiSagi/IS477-Sagi-Kidwell-Shafer/refs/heads/main/museum_db_export/objects_cons.csv], and [the Text Entries Dataset: https://media.githubusercontent.com/media/PranathiSagi/IS477-Sagi-Kidwell-Shafer/refs/heads/main/museum_db_export/text_entries.csv]. It provides a unified structure for analyzing museum artifacts, including provenance and acquisition history. All these datasets help us compare the traditional and digital artworks at the National Gallery of Art Museum dataset to answer our research questions when determining the relationship between these two artworks. This helps us see whether digital or traditional media artworks are more represented in the National Gallery of Art Museum to help us understand which works of art of being included versus excluded.",
+  "description": "A comprehensive database export compiled for the IS477 project. This dataset integrates object metadata and collection information, combining records from the Objects, Media, Media Relationships, Constituents, Object Constituents, and Objects Text Entries datasets. It provides a unified structure for analyzing museum artifacts, including provenance and acquisition history. These datasets help us compare traditional and digital artworks at the National Gallery of Art to determine representation and prioritization of different art media.",
   "url": "https://github.com/PranathiSagi/IS477-Sagi-Kidwell-Shafer/tree/main/museum_db_export",
   "keywords": ["museum", "database", "IS477", "open data"],
-   "creator": [
-    {
-      "@type": "Person",
-      "name": "Pranathi Sagi"
-    },
-    {
-      "@type": "Person",
-      "name": "Charlotte Shafer"
-    },
-    {
-      "@type": "Person",
-      "name": "Thea Kidwell"
-    }
+  "creator": [
+    { "@type": "Person", "name": "Pranathi Sagi" },
+    { "@type": "Person", "name": "Charlotte Shafer" },
+    { "@type": "Person", "name": "Thea Kidwell" }
   ],
   "isBasedOn": [
-    "https://url-to-source-dataset-1.com",
-    "https://url-to-source-dataset-2.com"
+    "https://media.githubusercontent.com/media/PranathiSagi/IS477-Sagi-Kidwell-Shafer/refs/heads/main/museum_db_export/objects.csv",
+    "https://media.githubusercontent.com/media/PranathiSagi/IS477-Sagi-Kidwell-Shafer/refs/heads/main/museum_db_export/media.csv",
+    "https://media.githubusercontent.com/media/PranathiSagi/IS477-Sagi-Kidwell-Shafer/refs/heads/main/museum_db_export/media_relationships.csv",
+    "https://media.githubusercontent.com/media/PranathiSagi/IS477-Sagi-Kidwell-Shafer/refs/heads/main/museum_db_export/cons.csv",
+    "https://media.githubusercontent.com/media/PranathiSagi/IS477-Sagi-Kidwell-Shafer/refs/heads/main/museum_db_export/objects_cons.csv",
+    "https://media.githubusercontent.com/media/PranathiSagi/IS477-Sagi-Kidwell-Shafer/refs/heads/main/museum_db_export/text_entries.csv"
   ],
   "datePublished": "2025-04-28",
   "license": "https://creativecommons.org/licenses/by/4.0/",
-  "distribution": [
-    {
-      "@type": "DataDownload",
-      "contentUrl": "https://raw.githubusercontent.com/PranathiSagi/IS477-Sagi-Kidwell-Shafer/main/museum_db_export/data.csv",
-      "encodingFormat": "text/csv"
-    },
-    {
-      "@type": "DataDownload",
-      "contentUrl": "https://raw.githubusercontent.com/PranathiSagi/IS477-Sagi-Kidwell-Shafer/main/museum.sql",
-      "encodingFormat": "application/sql"
-    }
-  ],
+  "isAccessibleForFree": true,
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "data.gov"
+  },
   "publisher": {
     "@type": "Organization",
     "name": "University Course Project - IS477"
-  }
+  },
+  "hasPart": [
+    {
+      "@type": "Dataset",
+      "name": "Objects",
+      "description": "The art objects serve as the most important part of this collection. Every entry is assigned a unique 'objectID', which serves as a fundamental connection to the constituents, media relationships, and text entries to connect each object to separate fields.",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "creator": { "@type": "Organization", "name": "National Gallery of Art" }
+    },
+    {
+      "@type": "Dataset",
+      "name": "Media",
+      "description": "This media dataset contains the type of media, such as audio and video items. The media ID connects to the media relationships table to link media with object IDs.",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "creator": { "@type": "Organization", "name": "National Gallery of Art" }
+    },
+    {
+      "@type": "Dataset",
+      "name": "Media Relationship",
+      "description": "Records relationships between media items and object items in the NGA art entities using a unique related ID.",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "creator": { "@type": "Organization", "name": "National Gallery of Art" }
+    },
+    {
+      "@type": "Dataset",
+      "name": "Constituents",
+      "description": "Constituents are people or groups (artists, owners, donors) that have a relationship with objects, identified by a constituent ID.",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "creator": { "@type": "Organization", "name": "National Gallery of Art" }
+    },
+    {
+      "@type": "Dataset",
+      "name": "Object Constituents",
+      "description": "A relationship table connecting objects and constituents using object ID and constituent ID.",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "creator": { "@type": "Organization", "name": "National Gallery of Art" }
+    },
+    {
+      "@type": "Dataset",
+      "name": "Objects Text Entries",
+      "description": "Stores specific text associated with each object, connecting via object ID to provide further descriptions.",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "creator": { "@type": "Organization", "name": "National Gallery of Art" }
+    }
+  ],
+  "distribution": [
+    { "@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": "https://media.githubusercontent.com/media/PranathiSagi/IS477-Sagi-Kidwell-Shafer/refs/heads/main/museum_db_export/objects.csv" },
+    { "@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": "https://media.githubusercontent.com/media/PranathiSagi/IS477-Sagi-Kidwell-Shafer/refs/heads/main/museum_db_export/media.csv" },
+    { "@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": "https://media.githubusercontent.com/media/PranathiSagi/IS477-Sagi-Kidwell-Shafer/refs/heads/main/museum_db_export/media_relationships.csv" },
+    { "@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": "https://media.githubusercontent.com/media/PranathiSagi/IS477-Sagi-Kidwell-Shafer/refs/heads/main/museum_db_export/cons.csv" },
+    { "@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": "https://media.githubusercontent.com/media/PranathiSagi/IS477-Sagi-Kidwell-Shafer/refs/heads/main/museum_db_export/objects_cons.csv" },
+    { "@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": "https://media.githubusercontent.com/media/PranathiSagi/IS477-Sagi-Kidwell-Shafer/refs/heads/main/museum_db_export/text_entries.csv" }
+  ]
 }
 </script>

@@ -6,10 +6,24 @@
   "description": "A database export containing records from the museum project, documenting object metadata and collection information.",
   "url": "https://github.com/PranathiSagi/IS477-Sagi-Kidwell-Shafer/tree/main/museum_db_export",
   "keywords": ["museum", "database", "IS477", "open data"],
-  "creator": {
-    "@type": "Person",
-    "name": "Pranathi Sagi" 
-  },
+   "creator": [
+    {
+      "@type": "Person",
+      "name": "Pranathi Sagi"
+    },
+    {
+      "@type": "Person",
+      "name": "Charlotte Shafer"
+    },
+    {
+      "@type": "Person",
+      "name": "Thea Kidwell"
+    }
+  ],
+  "isBasedOn": [
+    "https://url-to-source-dataset-1.com",
+    "https://url-to-source-dataset-2.com"
+  ],
   "datePublished": "2025-04-28",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "distribution": [

@@ -91,10 +91,112 @@ Data Dictionary: Detailed descriptions of the data files and their elements:
 This data dictionary contains the SQL required to define your own working database in PostGreSQL should you choose to load and query the data using a RDBMS.
 
 Table, Column, and Type	Description
-	
+
+DATA CSV FILE
 CREATE TABLE data.csv	
 
-CREATE TABLE MUSEUM.SQL 
+Museum.SQL File
+CREATE TABLE objects 
+(
+        objectid 						INTEGER NOT NULL PRIMARY KEY, the primary identifier for an art object - identifier is created by the NGA's collection management system (tms); primary key for the table
+        uuid 							TEXT, universally unique identifier for this art object
+        accessioned 					INTEGER NOT NULL, 0 | 1 flag indicating whether this object is an NGA accessioned work - for the public collection extract, this should always be 1
+        accessionnum 					TEXT, accession number assigned to an art object - art objects that are not accessioned works do not begin with a year - otherwise, the vast majority of NGA art object accession numbers are formatted with a numbering system starting with the year, then followed by an accession lot, and finally ordering within that lot, e.g. 1942.2.1 - depending on the complexity of an art object these can be more complicated
+        title 							TEXT, title of the art object
+        displaydate 					DATE, human readable date corresponding to the creation timeframe of the object
+        beginyear 						FLOAT, computer readable year corresponding to the creation start year of the object
+        endyear 						FLOAT, computer readable year corresponding to the creation finish year of the object
+        visualbrowsertimespan 			TEXT, a computer-generated timeframe slot assigned based on the begin and end year
+        medium 							TEXT, materials comprising the art object
+        dimensions 						TEXT, human readable dimensions of the art object
+        attributioninverted 			TEXT, text describing the artist(s) primarily attributed with creating the work, inverted
+        attribution 					TEXT, text describing the artist(s) primarily attributed with creating the work
+        creditline						TEXT, acknowledgement of credit to constituents who provided or funded the acquisition of the art object 
+        classification 					TEXT, type of art object
+        isvirtual 						INTEGER NOT NULL, 0 | 1 flag indicating whether this art object is a "virtual" object or not - see accompanying documentation for a description of what constituents a "virtual" object
+        departmntabbr 					TEXT, abbreviation for the NGA department with curatorial responsibility for this art object; for a list of NGA curatorial departments, please contact the NGA
+        lastdetectmodification 			TEXT, datetime stamp of the last detected modification of this object in the source system
+        wikidataid 						TEXT, Wikidata ID for NGA object. Not all objects are represented in Wikidata. 
+        merged_classification 			TEXT, combines classification (type of art object) and subClassification (sub-type of art object) to determne the full classification for art objects
+        );
+               
+    CREATE OR REPLACE TABLE cons (
+        constituentid 					INTEGER NOT NULL PRIMARY KEY, tables identifier, determines who the constituent it (artist, donor, publisher)
+        uuid 							INTEGER NOT NULL, universally unique identifier for this constituent
+        ulanid 							FLOAT, Getty ULAN ID - partially applied to NGA artists - not all artists are in ULAN and not all matches have been curated yet
+        preferreddisplayname 			TEXT, inverted full name of the constituent - this is the NGA's preferred name for the constituent
+        forwarddisplayname 				TEXT, forward direction preferred full name of the constituent
+        lastname 						TEXT, preferred last name of the constituent
+        displaydate 					TEXT, birth and death dates in human readable form
+        artistofngaobject 				INT NOT NULL, 0 = not an artist associated with an NGA accessioned object OR 1 = artist of an NGA accessioned object
+        beginyear 						FLOAT, birth year of constituent
+        endyear 						FLOAT, death year of constituent
+        visualbrowsertimespan 			TEXT, computed time-span slot for this artist's life
+        nationality						TEXT, nationality of the artist - not all values are conforming
+        visualbrowsernationality 		TEXT, one of the top 25 normalized nationalities or "other" if outside of top 25
+        constituenttype 				TEXT, determines whether the constituent is NOT NULL,	 anonymous
+ 											 corporate
+											 couple
+											 individual
+ 											 purchase_fund
+        wikidataid 						TEXT, character varying(64) NULL	Wikidata ID – partially applied to NGA artists – not all artists in represented in Wikidata.
+    );
+    
+    CREATE OR REPLACE TABLE media (
+        mediaid							INTEGER NOT NULL PRIMARY KEY, numerical identifier for externally managed media - BrightCove and SoundCloud are our media providers and they both use large integers for media identifiers
+        mediatype 						TEXT, audio or video media type
+        title 							TEXT, title of the media item
+        description 					TEXT, HTML fragment description of the media item
+        duration 						FLOAT, duration of the media item in seconds (there could be manually entered errors in some of these values)
+        language 						TEXT, two letter language without localization, e.g. en, fr, zh
+        thumbnailurl 					TEXT, full URL to the thumbnail
+        playurl 						TEXT, a URL that can be used to play the media file directly
+        downloadurl 					TEXT, a URL that allegedly can be used to download the media file directly (no option for brightcove so many nulls)
+        keywords 						TEXT, a list of non-vocabulary-controlled keywords assigned to the media item internally
+        tags 							TEXT, a list of AEM tags assigned to the media item by authors
+        imageurl 						TEXT, similar to thumbnail, but for a full-size image
+        presentationdate 				DATE, the presentation date of an event represented by this media
+        releasedate 					DATE, publication date
+        lastmodified 					DATE, last modification date of the media item
+    );
+    
+    CREATE OR REPLACE TABLE media_relationships (
+        mediaid 					INTEGER NOT NULL FOREIGN KEY TO MEDIA TABLE, connects all the media to the media table to determine how these two are connected/related to one another
+        relatedid 					INTEGER NOT NULL FOREIGN KEY TO OBJECTS TABLE, foreign key into the relevant table for the relatedEntity
+        relatedentity 				TEXT, the related entity, currently either nga:art:tms:constituents or nga:art:tms:objects
+    );
+               
+    CREATE OR REPLACE TABLE text_entries (
+        objectid 					INTEGER NOT NULL, FOREIGN KEY TO OBJECTS TABLE to connects all of the objects within this table to get all of the text entries,
+        text 						TEXT, the text of each of the objects itself which may or may not contain one of several embedded formatting adornments
+        texttype 					TEXT, consists of one of categories: 
+											bibliography,
+ 											brief_narrative,
+ 											conservation_note,
+ 											documentary_labels_inscriptions,
+ 											exhibition_history,
+ 											exhibition_history_footnote,
+ 											inscription_footnote,
+ 											lifetime_exhibition,
+ 											other_collections, or
+ 											systematic_catalogue
+        year 						FLOAT, the year the text was published
+    );
+    
+    CREATE OR REPLACE TABLE objects_cons (
+        objectid 					INTEGER NOT NULL PRIMARY KEY, the primary identifier for the objects constituents table because the identifier is unique to this table and connects to the constituent ID
+        constituentid 				INTEGER NOT NULL FOREIGN KEY, connects information to the constituents table
+        displayorder 				INTEGER NOT NULL, order which displays the list of constituent relationships for each given object from the objects table
+        roletype 					TEXT, includes whether the constituents are the "artist," "donor," or "owner" role types
+        role 						TEXT, for each role type, there are specific roles, e.g. for artist, one of the roles is "painter"
+        prefix 						TEXT, text prefix associated with the relationship / transaction
+        suffix 						TEXT, text suffix associated with the relationship / transaction
+        displaydate 				TEXT, human readable date(s) associated with the relationship / transaction,
+        beginyear 					FLOAT, four digit year when the relationship / transaction started
+        endyear 					FLOAT, four digit year when the relationship / transaction ended
+        country 					TEXT, the full country name where the relationship / transaction occurred
+        zipcode 					TEXT, the postal code where the relationship / transaction occurred
+)
 	
 CREATE TABLE constituents	A constituent is a single person or a group of persons (see constituent type).  Constituents in the extract typically have a relationship with one or more objects in the public objects extract.  Relationships are defined in another table, but a constituent may be an artist, an owner, or a donor, or all of these.
 we only use a limited number of anonymous artists to represent all anonymous artists of works

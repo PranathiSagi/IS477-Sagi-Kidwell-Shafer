@@ -1,0 +1,37 @@
+Assuming unrestricted shared filesystem usage.
+host: illinoisnet-guest-10-203-236-201.near.illinois.edu
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job           count
+----------  -------
+researchQ1        1
+run_all           1
+total             2
+
+Select jobs to execute...
+Execute 1 jobs...
+[Thu Apr 30 09:03:52 2026]
+localrule researchQ1:
+    input: Museum.db
+    output: results/Play_URL_Status_Codes.png, results/Thumbnail_URL_Status_Codes.png, results/Download_URL_Status_Codes.png, results/Image_URL_Status_Codes.png
+    jobid: 1
+    reason: Code has changed since last execution
+    resources: tmpdir=/var/folders/w7/23_x_krd56dgz3l_g0tp_m0w0000gn/T
+[Thu Apr 30 09:08:37 2026]
+Finished jobid: 1 (Rule: researchQ1)
+1 of 2 steps (50%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Thu Apr 30 09:08:37 2026]
+localrule run_all:
+    input: Museum.db, museum_database_export.sql, results/Play_URL_Status_Codes.png, results/Thumbnail_URL_Status_Codes.png, results/Download_URL_Status_Codes.png, results/Image_URL_Status_Codes.png, results/Traditional_vs_Digital_Object_Distribution.png
+    jobid: 0
+    reason: Input files updated by another job: results/Play_URL_Status_Codes.png, results/Image_URL_Status_Codes.png, results/Download_URL_Status_Codes.png, results/Thumbnail_URL_Status_Codes.png
+    resources: tmpdir=/var/folders/w7/23_x_krd56dgz3l_g0tp_m0w0000gn/T
+[Thu Apr 30 09:08:37 2026]
+Finished jobid: 0 (Rule: run_all)
+2 of 2 steps (100%) done
+Complete log(s): /Users/charlotteshafer/Documents/GitHub/IS477-Sagi-Kidwell-Shafer/.snakemake/log/2026-04-30T090352.394259.snakemake.log

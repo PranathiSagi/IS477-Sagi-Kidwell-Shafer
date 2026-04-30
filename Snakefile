@@ -26,3 +26,9 @@ rule researchQ2:
             "results/Traditional_vs_Digital_Object_Distribution.png"
         script:
             "scripts/researchQ2.py"
+
+rule researchQ3:
+        input:
+            "Museum.db"
+        script:
+            "scripts/researchQ3.py"

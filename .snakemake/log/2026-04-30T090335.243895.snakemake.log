@@ -1,0 +1,15 @@
+Assuming unrestricted shared filesystem usage.
+host: illinoisnet-guest-10-203-236-201.near.illinois.edu
+Building DAG of jobs...
+AmbiguousRuleException:
+Rules researchQ3 and researchQ2 are ambiguous for the file results/Traditional_vs_Digital_Object_Distribution.png.
+Consider starting rule output with a unique prefix, constrain your wildcards, or use the ruleorder directive.
+Wildcards:
+	researchQ3: 
+	researchQ2: 
+Expected input files:
+	researchQ3: Museum.db
+	researchQ2: Museum.db
+Expected output files:
+	researchQ3: results/Traditional_vs_Digital_Object_Distribution.png
+	researchQ2: results/Traditional_vs_Digital_Object_Distribution.png

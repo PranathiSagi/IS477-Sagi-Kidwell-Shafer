@@ -1,0 +1,37 @@
+Assuming unrestricted shared filesystem usage.
+host: Charlottes-MacBook-Pro.local
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job           count
+----------  -------
+researchQ3        1
+run_all           1
+total             2
+
+Select jobs to execute...
+Execute 1 jobs...
+[Fri May  1 14:27:13 2026]
+localrule researchQ3:
+    input: Museum.db
+    output: results/Pieces_By_Timeperiod.png, results/Most_Common_Artist_By_Era.png
+    jobid: 3
+    reason: Missing output files: results/Pieces_By_Timeperiod.png, results/Most_Common_Artist_By_Era.png
+    resources: tmpdir=/var/folders/w7/23_x_krd56dgz3l_g0tp_m0w0000gn/T
+[Fri May  1 14:27:14 2026]
+Finished jobid: 3 (Rule: researchQ3)
+1 of 2 steps (50%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Fri May  1 14:27:14 2026]
+localrule run_all:
+    input: Museum.db, museum_database_export.sql, results/Play_URL_Status_Codes.png, results/Thumbnail_URL_Status_Codes.png, results/Download_URL_Status_Codes.png, results/Image_URL_Status_Codes.png, results/Traditional_vs_Digital_Object_Distribution.png, results/Pieces_By_Timeperiod.png, results/Most_Common_Artist_By_Era.png
+    jobid: 0
+    reason: Input files updated by another job: results/Pieces_By_Timeperiod.png, results/Most_Common_Artist_By_Era.png
+    resources: tmpdir=/var/folders/w7/23_x_krd56dgz3l_g0tp_m0w0000gn/T
+[Fri May  1 14:27:14 2026]
+Finished jobid: 0 (Rule: run_all)
+2 of 2 steps (100%) done
+Complete log(s): /Users/charlotteshafer/Documents/GitHub/IS477-Sagi-Kidwell-Shafer/.snakemake/log/2026-05-01T142712.596199.snakemake.log

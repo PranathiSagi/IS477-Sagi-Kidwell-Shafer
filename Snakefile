@@ -6,7 +6,9 @@ rule run_all:
             "results/Thumbnail_URL_Status_Codes.png",
             "results/Download_URL_Status_Codes.png",
             "results/Image_URL_Status_Codes.png",
-            "results/Traditional_vs_Digital_Object_Distribution.png"
+            "results/Traditional_vs_Digital_Object_Distribution.png",
+            "results/Pieces_By_Timeperiod.png",
+            "results/Most_Common_Artist_By_Era.png"
 
 rule researchQ1:
         input:
@@ -30,5 +32,8 @@ rule researchQ2:
 rule researchQ3:
         input:
             "Museum.db"
+        output:
+            "results/Pieces_By_Timeperiod.png",
+            "results/Most_Common_Artist_By_Era.png"
         script:
             "scripts/researchQ3.py"

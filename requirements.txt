@@ -1,1 +1,4 @@
-
+snakemake
+duckdb
+pandas
+matplotlib

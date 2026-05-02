@@ -8,3 +8,4 @@ dependencies:
   - duckdb
   - pandas
   - matplotlib
+  - seaborn

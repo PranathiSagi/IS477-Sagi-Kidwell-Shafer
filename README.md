@@ -55,4 +55,6 @@ When answering the rest of our research questions, the first thing we did was lo
 
 **References:** [Formatted citations for any papers, datasets, or software used in your project.]The National Gallery of Art Open Data File on GitHub: (https://github.com/NationalGalleryOfArt/opendata/tree/main/data)
 
+The licenses we used: Creative Commons Zero v1.0 Universal (came from the original National Gallery of Art open data repository we used for this project)
+
 Project Metadata: This repository contains machine-readable metadata. You can access the Schema.org JSON-LD file at: metadata/metadata.jsonld

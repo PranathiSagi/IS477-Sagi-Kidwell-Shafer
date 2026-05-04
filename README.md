@@ -1,4 +1,4 @@
-**Title: Final Milestone Report on National Gallery of Art Dataset **
+****Title: Final Milestone Report on National Gallery of Art Dataset ****
 
 **Contributors:** Bulleted list of contributors (with optional ORCIDs).
 

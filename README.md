@@ -1,4 +1,4 @@
-****Title: Final Milestone Report on National Gallery of Art Dataset ****
+**Title: Final Milestone Report on National Gallery of Art Dataset**
 
 **Contributors:** 
 
@@ -74,8 +74,8 @@ Another challenge we had while cleaning our datasets was making sure we were kee
 3) Close terminal and open a new terminal
 4) Run in terminal: “conda activate setup”
 5) Run in terminal: “snakemake --cores 1”
-Note: do not use quotes in the terminal commands
-Note: it may take up to 10 minutes for the snakemake automation to complete
+* Note: do not use quotes in the terminal commands
+* Note: it may take up to 10 minutes for the snakemake automation to complete
 
 **References:** [Formatted citations for any papers, datasets, or software used in your project.]The National Gallery of Art Open Data File on GitHub: (https://github.com/NationalGalleryOfArt/opendata/tree/main/data)
 

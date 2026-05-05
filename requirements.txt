@@ -2,3 +2,7 @@ snakemake
 duckdb
 pandas
 matplotlib
+os
+concurrent
+seaborn
+numpy

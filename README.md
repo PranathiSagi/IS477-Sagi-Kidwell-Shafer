@@ -77,7 +77,8 @@ Another challenge we had while cleaning our datasets was making sure we were kee
 * Note: do not use quotes in the terminal commands
 * Note: it may take up to 10 minutes for the snakemake automation to complete
 
-**References:** [Formatted citations for any papers, datasets, or software used in your project.]The National Gallery of Art Open Data File on GitHub: (https://github.com/NationalGalleryOfArt/opendata/tree/main/data)
+**References:** 
+The National Gallery of Art Open Data File on GitHub: https://github.com/NationalGalleryOfArt/opendata/tree/main/data
 
 The licenses we used: Creative Commons Zero v1.0 Universal: The Creative Commons CC0 Public Domain Dedication waives copyright interest in a work you've created and dedicates it to the worldwide public domain. (came from the original National Gallery of Art open data repository we used for this project)
 

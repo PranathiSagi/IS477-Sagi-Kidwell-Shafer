@@ -3,7 +3,9 @@
 **Contributors:** 
 
 -Pranathi:  I worked on the Summary and the Data profile sections. I also worked on answering the second research question by creating the SQL table to connect the media, media relations, and objects datasets together. Once I did this, I made a data visualization bar chart to compare the amount of traditional versus digital objects that were represented in the National Gallery of Art dataset. Once I did this, I was able to answer my research questions. This helped me add more to the Summary and Data profile sections. I also did the Metadata documentation section by importing the Data Dictionary information from the original National Gallery  of Art. I finished this part off by including the machine-readable descriptive metadata that described my project in conformance with the Schema.org standard. 
--Charlotte:
+
+-Charlotte: I worked on the Future Work, Challenges, and Reproducing sections. I also worked on answering the first research question, with along with some collaboration with group members. To answer this question, I converted the Media table in our Museum database into a dataframe called digital_objects. Part of my analysis revolved around data cleaning and an examination of metadata and the structure of the opendata repository. I then used the ThreadPoolExecutor from the concurrent.features package and requests library to determine the status code that resulted from trying to access each link in the digital_objects dataframe (play_url, thumbnail_url, download_url, image_url). This helped us determine the accessibility of media objects in the data provided by the National Gallery of Art. Finally, I worked on creating the Snakemake file and setup.yml that allow for reproducibility, once again collaborating with my group members.
+
 -Thea: 
 
 **Summary:** 
